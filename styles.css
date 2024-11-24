@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('/img/Wallpaper.jpg');
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+/* Posisi tombol dan tulisan di bagian bawah */
+.container {
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Menyusun elemen atas, tengah, dan bawah */
+  align-items: center;
+}
+
+.title {
+  margin-top: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+  grid-template-rows: repeat(2, auto); /* 2 baris */
+  gap: 20px; /* Jarak antar elemen */
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.photo {
+  opacity: 0; /* Awalnya tidak terlihat */
+  transition: opacity 1s ease-in-out;
+  text-align: center;
+}
+
+
+.photo img {
+  width: 110px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.photo p {
+  margin-top: 10px;
+  font-size: 1rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.photo.show {
+  opacity: 1; /* Efek fade-in saat terlihat */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: rgba(255, 69, 0, 0.8);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(255, 69, 0, 1);
+}
+
+p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+.hint {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px; /* Memberi jarak antara tulisan dan tombol */
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px; /* Memberi ruang antara footer dan batas layar */
+}
+
+#particleCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Pastikan di bawah elemen lainnya */
+  pointer-events: none; /* Tidak mengganggu interaksi */
+}
