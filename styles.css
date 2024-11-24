@@ -90,7 +90,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 80px; /* Memberi ruang antara footer dan batas layar */
+  margin-bottom: 92px; /* Memberi ruang antara footer dan batas layar */
 }
 
 #particleCanvas {
